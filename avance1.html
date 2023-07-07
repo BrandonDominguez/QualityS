@@ -16,6 +16,17 @@
               
               return true;
             }
+
+            function validatePassword() {
+                var password = document.getElementById("password").value;
+      
+                if (password.length < 8) {
+                    alert("La contraseña debe tener al menos 8 caracteres.");
+                return false;
+                }
+      
+                return true;
+    }
           </script>
 
     </head>
@@ -28,7 +39,7 @@
 
         <div class="login-container">
           <h2>Iniciar Sesión</h2>
-          <form>
+          <form onsubmit="return validateUsername() && validatePassword();">
             <div class="form-group">
               <label for="username">Usuario:</label>
               <input type="text" id="username" name="username" required>
