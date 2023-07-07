@@ -38,4 +38,26 @@
   button:hover {
     background-color: #45a049;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
   
+  header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
