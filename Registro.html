@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quality S</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
+        <script>
+            function validateUsername() {
+              var username = document.getElementById("username").value;
+              var regex = /^[a-zA-Z0-9]{6,12}$/;
+              
+              if (!regex.test(username)) {
+                alert("El usuario debe tener entre 6 y 12 caracteres alfanuméricos.");
+                return false;
+              }
+              
+              return true;
+            }
+
+            function validatePassword() {
+                var password = document.getElementById("password").value;
+      
+                if (password.length < 8) {
+                    alert("La contraseña debe tener al menos 8 caracteres.");
+                return false;
+                }
+      
+                return true;
+    }
+          </script>
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1><center>Quality S</center></h1>
+        </header>
+
+        <div class="login-container">
+          <h2>Registro</h2>
+          <form onsubmit="return validateUsername() && validatePassword();">
+            <div class="form-group">
+              <label for="email">Nombre:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Apellidos:</label>
+                <input type="text" id="lastname" name="lastname" required>
+              </div>
+              <div class="form-group">
+                <label for="tel">Telefono:</label>
+                <input type="int" id="tel" name="tel" required>
+              </div>
+            <div class="form-group">
+                <label for="email">Correo electronico:</label>
+                <input type="text" id="email" name="email" required>
+              </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" href="PaginaPrincipal.html">Registrarse</button>
+            
+          </form>
+
+
+        </div>
+
+        
+
+    </body>
+
+ 
+
+    <footer>
+        
+        <p>© 2023 Quality S</p>
+            
+    </footer>
+
+
+    
+</html>
