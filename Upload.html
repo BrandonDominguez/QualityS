@@ -59,12 +59,15 @@
               border-style: dotted;
               padding:13px">
                 <br><br><br><br><br>
-              <button type="button" class="" style="width:420px; height:250px;border-radius: 8px;background: #e5322d;color: #fff;font-weight: 600;">SUBIR ARCHIVOS </button>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Selecciona un archivo para subir:
+                    <input type="file" name ="fileToUpload" id="fileToUpload" style="width:420px; height:250px;border-radius: 8px;background: #e5322d;color: #fff;font-weight: 600;">
+                    <input type="submit" value ="Subir" name="submit" style="width:150px; height:50px;border-radius: 8px;background: blue;color: #fff;font-weight: 600;">
+                </form>
               <br><br>
-              <button type="button" class="" style="width:150px; height:50px;border-radius: 8px;background: blue;color: #fff;font-weight: 600;">Comparar </button>
             <br><br><br><br>
             </div>
-            </div>  
+            </div>
         </main>
     </div>
 
