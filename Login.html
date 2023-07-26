@@ -1,3 +1,28 @@
+
+<?php
+
+include('db.php');
+
+if (isset($_POST['registro'])) {
+
+  $username = $_POST['name'];
+  $lastname = $_POST['lastname'];
+  $tel = $_POST['tel'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+
+  $query = "INSERT INTO `usuarios` (`idUsuario`, `nombre`, `apellidos`, `telefono`, `correo`, `contrasena`) VALUES ('NULL', '$username', '$lastname', '$tel', '$email', '$password');";
+
+  $result = mysqli_query($conn, $query);
+
+  if(!$result) {
+    die("Query Failed.");
+  }
+  
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,7 +64,7 @@
 
         <div class="login-container">
           <h2>Iniciar Sesión</h2>
-          <form onsubmit="return validateUsername() && validatePassword();">
+          <form onsubmit="return validateUsername() && validatePassword();" action="Upload.html" method="POST">
             <div class="form-group">
               <label for="username">Usuario:</label>
               <input type="text" id="username" name="username" required>
@@ -48,11 +73,11 @@
               <label for="password">Contraseña:</label>
               <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Iniciar Sesión</button>
+            <input name="login" type="submit" value="Iniciar">
             
           </form>
 
-            <p>¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            <p>¿No tienes una cuenta? <a href="registro.php">Regístrate aquí</a></p>
 
         </div>
 
